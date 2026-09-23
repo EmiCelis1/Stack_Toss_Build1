@@ -5,11 +5,17 @@ using NaughtyAttributes;
 
 public class UIWindow : MonoBehaviour
 {
+    [Header("UI Settings")]
     [SerializeField] private RectTransform _canvasRectTransform;
     [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private bool _hideOnStart;
 
+    [Header("Animation Settings")]
+    [SerializeField] private float showDuration = 0.5f;
+    [SerializeField] private float hideDuration = 0.5f;
 
+    [SerializeField] private Ease showEase = Ease.OutBack;
+    [SerializeField] private Ease hideEase = Ease.InBack;
     void Start()
     {
         Initialize();
@@ -34,7 +40,7 @@ public class UIWindow : MonoBehaviour
         {
             _canvasRectTransform.gameObject.SetActive(true);
             RectTransform rectTransform = _canvasGroup.GetComponent<RectTransform>();
-            rectTransform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+            rectTransform.DOScale(Vector3.one, showDuration).SetEase(showEase);
         }
     }
 
@@ -48,7 +54,7 @@ public class UIWindow : MonoBehaviour
         else
         {
             RectTransform rectTransform = _canvasGroup.GetComponent<RectTransform>();
-            rectTransform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.OutBack);
+            rectTransform.DOScale(Vector3.zero, hideDuration).SetEase(hideEase);
         }
     }
 
