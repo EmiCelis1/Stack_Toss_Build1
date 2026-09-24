@@ -5,6 +5,9 @@ using NaughtyAttributes;
 
 public class UIWindow : MonoBehaviour
 {
+    [Header("Data")]
+    [SerializeField] private string _id;
+
     [Header("UI Settings")]
     [SerializeField] private RectTransform _canvasRectTransform;
     [SerializeField] private CanvasGroup _canvasGroup;
@@ -16,6 +19,11 @@ public class UIWindow : MonoBehaviour
 
     [SerializeField] private Ease showEase = Ease.OutBack;
     [SerializeField] private Ease hideEase = Ease.InBack;
+
+    public CanvasGroup CanvasGroup => _canvasGroup;
+    public RectTransform CanvasRectTransform => _canvasRectTransform;
+    public string Id => _id;
+
     void Start()
     {
         Initialize();
@@ -25,7 +33,7 @@ public class UIWindow : MonoBehaviour
     {
         if (_hideOnStart)
         {
-            Hide();
+            Hide(true);       
         }
     }
 
