@@ -1,22 +1,30 @@
-using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
+using NaughtyAttributes;
+using UnityEngine;
 
+/// <summary>
+/// Clase que gestiona las ventanas de UI en la escena.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private List<UIWindow> _uiWindow;
-    public List<UIWindow> UIWindows => _uiWindow;
+    /// <summary>
+    /// Lista de UI en nuestra escena.
+    /// </summary>
+    [SerializeField] private List<UIWindow> _uiWindows;
 
-    void Start()
-    {
+    /// <summary>
+    /// Obtiene la lista de ventanas de UI.
+    /// </summary>
+    /// <returns></returns>
+    public List<UIWindow> UIWindows => _uiWindows;
 
-    }
-
-
+    /// <summary>
+    /// Muestra la ventana de UI con el nombre especificado.
+    /// </summary>
+    /// <param name="windowName"></param>
     public void ShowWindow(string windowName)
     {
-        foreach (var window in _uiWindow)
+        foreach (var window in _uiWindows)
         {
             if (window.Id == windowName)
             {
@@ -24,26 +32,31 @@ public class UIManager : MonoBehaviour
                 window.Show();
                 break;
             }
-            Debug.LogError("Window not found: " + windowName);
+            else
+            {
+                Debug.LogError("Window not found: " + windowName);
+            }
         }
     }
 
+    /// <summary>
+    /// Oculta la ventana de UI con el nombre especificado.
+    /// </summary>
+    /// <param name="windowName"></param>
     public void HideWindow(string windowName)
     {
-        foreach (var window in _uiWindow)
+        foreach (var window in _uiWindows)
         {
             if (window.Id == windowName)
             {
-                Debug.Log($"Showing window: {windowName}");
+                Debug.Log($"Hiding window: {windowName}");
                 window.Hide();
                 break;
             }
-            Debug.LogError("Window not found: " + windowName);
+            else
+            {
+                Debug.LogError("Window not found: " + windowName);
+            }
         }
-    }
-
-    private void ShowWindowPopup()
-    {
-
     }
 }
