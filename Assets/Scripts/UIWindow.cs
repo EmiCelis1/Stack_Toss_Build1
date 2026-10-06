@@ -53,6 +53,7 @@ public class UIWindow : MonoBehaviour
         
         else
         {
+            CanvasGroup.transform.localScale = Vector3.zero;
             _canvasRectTransform.gameObject.SetActive(true);
             RectTransform rectTransform = _canvasGroup.GetComponent<RectTransform>();
             rectTransform.DOScale(Vector3.one, showDuration).SetEase(showEase);
