@@ -407,7 +407,7 @@ MonoBehaviour:
   _id: popupui
   _canvasRectTransform: {fileID: 5498412572688468140}
   _canvasGroup: {fileID: 7504114651746366338}
-  _hideOnStart: 0
+  _hideOnStart: 1
   showDuration: 0.5
   hideDuration: 0.5
   showEase: 27
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 1838786992621235379}
   - component: {fileID: 5576674897326784870}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SpecialBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,10 +1150,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3676610238887576101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: -0.0000046341584, y: 0.000000052166666}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0025024414, y: 0}
-  m_SizeDelta: {x: 0.0050049, y: -0.00024414}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6431454346549337733
 CanvasRenderer:
