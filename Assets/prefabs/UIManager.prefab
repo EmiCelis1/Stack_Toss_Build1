@@ -225,85 +225,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &6481680530247083090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6328763764883745819}
-  - component: {fileID: 3207887214688896602}
-  - component: {fileID: 172734440537930733}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6328763764883745819
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481680530247083090}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -710.9256, y: -1100.1521, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2406026362716287622}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3207887214688896602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481680530247083090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!114 &172734440537930733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481680530247083090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: 6fa751e7b565ce84ba993d8bbf1ecd10, type: 3}
-  m_PointAction: {fileID: 0}
-  m_MoveAction: {fileID: 0}
-  m_SubmitAction: {fileID: 0}
-  m_CancelAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
-  m_MiddleClickAction: {fileID: 0}
-  m_RightClickAction: {fileID: 0}
-  m_ScrollWheelAction: {fileID: 0}
-  m_TrackedDevicePositionAction: {fileID: 0}
-  m_TrackedDeviceOrientationAction: {fileID: 0}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
-  m_ScrollDeltaPerTick: 6
 --- !u!1 &7791767976925026141
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +260,6 @@ Transform:
   - {fileID: 8366448001583013181}
   - {fileID: 8068039691259372196}
   - {fileID: 61673884694713643}
-  - {fileID: 6328763764883745819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5688882961096050133
@@ -359,7 +279,7 @@ MonoBehaviour:
   - {fileID: 6349584977952801754}
   - {fileID: 8784544671773253780}
   - {fileID: 311504769260186687}
-  - {fileID: 7262884166980904376}
+  - {fileID: 0}
 --- !u!1001 &780961607196914867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,6 +586,10 @@ PrefabInstance:
     - target: {fileID: 5223057844840717468, guid: 297f23f9e38edad4ab7507fcb544c2f8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011111007519282822, guid: 297f23f9e38edad4ab7507fcb544c2f8, type: 3}
+      propertyPath: m_fontSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6922552338180307296, guid: 297f23f9e38edad4ab7507fcb544c2f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1734,14 +1658,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8532014853807030208, guid: 554b89686111df845a36b5c4ae143e18, type: 3}
   m_PrefabInstance: {fileID: 8555944686129490667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7262884166980904376 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1330286986087829331, guid: 554b89686111df845a36b5c4ae143e18, type: 3}
-  m_PrefabInstance: {fileID: 8555944686129490667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adb5989ea6a87249a4e9eba8851d73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PopupUI
