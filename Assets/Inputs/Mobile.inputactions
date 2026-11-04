@@ -59,6 +59,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Drag",
+            "id": "85f19698-a0ff-4999-9e8d-ce2db42ce638",
+            "actions": [
+                {
+                    "name": "PrimaryContact",
+                    "type": "Button",
+                    "id": "1288630b-ca4a-4042-b792-ff361f8e2843",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "PrimaryPosition",
+                    "type": "Value",
+                    "id": "93a77e68-7985-4560-bd7f-93e65ccc7c6b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "45323c5f-9478-4612-86ae-1c8f3f4e9f92",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimaryContact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "232f53bd-c4e6-4812-8bb9-a282ab278eff",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimaryPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
